@@ -1,0 +1,10 @@
+/* Empty. Add your own CSS if you like */
+img.facebook-login{
+	content:url(../img/facebook.jpg);
+}
+img.twitter-login{
+	content:url(../img/twitter.jpg);
+}
+img.dummy-photo-container{
+	content:url(../img/photo.jpg);
+}

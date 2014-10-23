@@ -1,0 +1,45 @@
+<ion-view title="Login" ng-controller="LoginSignup">
+  
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">SIGNIN</h1>
+  </ion-header-bar>
+  
+  <ion-content>    
+		<form novalidate name="form" ng-submit="Login(user)">
+			<div class="list list-inset">
+			 	<label class="item item-input">
+					<i class="icon ion-person placeholder-icon"></i>
+						<input type="email" placeholder="Email" ng-model="user.email" required>
+				</label>
+				<label class="item item-input">
+					<i class="icon ion-ios7-locked placeholder-icon"></i>
+					<input type="password" placeholder="Password" ng-model="user.passwd" required>
+				</label>
+				<button class="button button-assertive button-full" ng-disabled="form.$invalid">
+					SIGN-IN
+				</button>
+		
+					
+				<div class="row">
+					<div class="col"><img class="facebook-login" style="width:100%"></img></div>
+					<div class="col"><img class="twitter-login" style="width:100%"></img></div>
+				</div>
+			</div>
+		</form>
+		
+		<div class="row">
+			<div class="col"><a>Forgot Password ?</a></div>
+			<div class="col">
+				<input type="checkbox"><label class="padding">Remember Me</label></input>
+			</div>
+		</div>
+				
+</ion-view>
+<div class="bar bar-footer bar-light">
+	<div class="title">
+		New User ?
+		<span class="padding">
+			<button class="button button-clear button-assertive padding-top signup" ng-click="OpenRegistration()">SignUp</button>
+		</span>
+	</div>
+</div> 

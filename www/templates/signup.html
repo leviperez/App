@@ -1,0 +1,71 @@
+<ion-view title="Login" ng-controller="Registration">
+	
+	<ion-header-bar class="bar-positive">    
+    <button class="button button-icon icon ion-chevron-left"></button>
+    <h1 class="title">REGISTER</h1>
+  </ion-header-bar>
+  
+  <ion-content>
+  	<form name="form" ng-submit="register(user)" novalidate>
+			<div class="list list-inset">
+				<table class="table-img">
+					<tr>
+						<td class="row1"><img class="photo dummy-photo-container" width=90 height=90 id="pic"/></td>
+						<td style="padding-left:20px;padding-top:-70px">
+							<label class="item item-input">
+								<input type="text" placeholder="First Name" ng-model="user.fname" required>
+							</label>
+							<label class="item item-input">
+								<input type="text" placeholder="Last Name" ng-model="user.lname" required>
+							</label>
+						</td>
+					</tr>
+				</table>  				
+			</div>
+			<div class="list list-inset">
+				<div class="item item-divider">
+					Profile
+				</div>
+				<label class="item item-input">
+					<i class="icon ion-social-facebook placeholder-icon"></i>
+					<input type="text" placeholder="User Your Facebook Info">
+				</label>
+				<label class="item item-input">
+					<i class="icon ion-person placeholder-icon"></i>
+					<input type="password" placeholder="Password" ng-model="user.passwd" ng-minlength="4" required>
+				</label>
+				<label class="item item-input">
+					<i class="icon ion-email placeholder-icon"></i>
+					<input type="email" placeholder="Email" ng-model="user.email" required>
+				</label>
+				<label class="item item-input">
+					<i class="icon ion-ios7-telephone placeholder-icon"></i>
+					<input type="number" placeholder="Phone (Optional)" ng-model="user.phone">
+				</label>
+				<div class="list-inset">
+					<input type="file" accept="image/*" capture="camera" id="file-upload">					
+				</div>
+				
+			</div>
+  	
+			
+  	
+			<div class="list list-inset">
+				<label>Your Phone No. and Email address will always remain private.</label><br><br>
+				<label>By clicking register you indicating that you have read and agree to the <a>Terms and Service</a> and <a>Privacy Policy</a>.</label>  		
+			</div>
+			<div class="padding">
+				<button class="button button-balanced button-block" ng-disabled="form.$invalid">
+					Register
+				</button>
+			</div>
+		</form>
+  </ion-content>
+  
+  <style>
+  	.table-img{width:100%;}
+  	.table-img .row1{width:70px;}
+  	div.list img.photo{vertical-align:top;margin-top:-10px;}
+  </style>
+  
+</ion-view>
